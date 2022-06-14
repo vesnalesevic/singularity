@@ -1,0 +1,912 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #333333;
+    --color-secondory: #707070;
+    --color-light: #747474;
+    --color-black-light: #000304;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-yellow: #DBCF05;
+    --color-green: #2AAB87;
+    --color-blue: #0095D7;
+    --color-red: #D4001B;
+    --color-bg1: #F8FBFC;
+    --color-bg2: #F9F9F9;
+
+
+    --container-width-lg: 1200px;
+    --container-width-md: 980px;
+    --container-width-sm: 700px;
+
+    --o-transition: all 400ms ease;
+}
+
+body {
+    background: var(--color-white);
+}
+
+.container-fluid {
+    padding: 0;
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 55px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: var(--color-black);
+    line-height: 67px;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 55px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: var(--color-white);
+    line-height: 67px;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 55px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: var(--color-black);
+    line-height: 67px;
+    font-weight: 400;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    letter-spacing: 0px;
+    font-style: normal;
+    color: var(--color-black);
+    line-height: 55px;
+    font-weight: 700;
+}
+
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--color-black-light);
+}
+
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--color-black);
+}
+
+ul,
+a,
+ol {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    color: var(--color-white);
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--color-primary);
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.p1 {
+    font-family: 'Nunito', sans-serif;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.p2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 1.14px;
+    color: var(--color-secondory);
+}
+
+.p3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    color: var(--color-secondory);
+}
+
+.p5 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--color-light);
+}
+
+.p6 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--color-light);
+}
+
+.p7 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--color-light);
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: fill;
+}
+
+.btn {
+    color: var(--color-black);
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--color-yellow);
+    color: var(--color-black);
+    border: 1px solid var(--color-yellow);
+    border-radius: 2px;
+    padding: 12px 36px;
+    height: 46px;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--color-yellow);
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+
+/* ************* NAVBAR ********************* */
+
+nav {
+    background: transparent;
+    width: 100vw;
+    height: 106px;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+    /*  transition: background .3s;
+    control how smooth the background changes */
+}
+
+nav ul {
+    height: 106px;
+}
+
+.nav_container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav button {
+    display: none;
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.nav_menu a {
+    text-decoration: none;
+}
+
+nav .social-icons {
+    padding-top: 20px;
+}
+
+.logo_scrolled {
+    display: none;
+}
+
+.logo-color {
+    width: 155px;
+    height: 27px;
+}
+
+/*change navbar styles on scroll using javasript */
+nav.scrolled {
+    background: var(--color-white);
+}
+
+nav.scrolled .nav_menu a {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+nav.scrolled .logo {
+    display: none;
+}
+
+nav.scrolled .logo_scrolled {
+    display: block;
+}
+
+.nav-items-color a {
+    color: var(--color-black);
+}
+
+/* ************* INTRODUCTION ********************* */
+.introduction {
+    text-align: center;
+    border-bottom: 8px solid;
+    border-image: linear-gradient(to right, var(--color-yellow) 25%, var(--color-green) 25%, var(--color-green) 50%, var(--color-blue) 50%, var(--color-blue) 75%, var(--color-red) 75%) 5;
+}
+
+.introduction_image {
+    background: linear-gradient(0deg, rgba(0, 28, 41, 0.61), rgba(0, 28, 41, 0.61)), url('/singularity-images/background-photo.jpg');
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: 887px;
+    width: 100%;
+}
+
+.introduction p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 538px;
+}
+
+.introduction h2 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 520px;
+    padding-top: 281px;
+}
+
+.introduction .btn {
+    margin-bottom: 80px;
+}
+
+.numbers {
+    min-height: 275px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
+}
+
+.numbers .p2 {
+    margin-top: -10px;
+}
+
+.numbers h4 {
+    padding-top: 90px;
+}
+
+/* *************    ABOUT US ********************* */
+.applications {
+    background: url('/singularity-images/Intersection\ 3.png') no-repeat var(--color-bg1);
+    background-position: bottom left;
+    min-height: 683px;
+}
+
+.applications-container {
+    padding-top: 120px;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.applications-left {
+    width: 50%;
+    margin-left: 0px;
+    border-radius: 16px;
+}
+
+
+.applications_image {
+    padding-top: 40px;
+    width: 100%;
+    height: auto;
+}
+
+.applications-right {
+    width: 50%;
+}
+
+.applications-right h4 {
+    margin-top: 85px;
+}
+
+/* *************   SECTION 2 ********************* */
+.section_2 {
+    height: 700px;
+}
+
+.section_2-container {
+    padding-top: 220px;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.section_2-left {
+    width: 50%;
+    margin-left: 0px;
+}
+
+
+.section_2_image {
+    width: 100%;
+    height: auto;
+}
+
+.section_2-right {
+    width: 50%;
+}
+
+/* *********** PROJECTS **************** */
+.projects h3 {
+    text-align: center;
+    padding-top: 155px;
+    padding-bottom: 100px;
+}
+
+.projects .p5 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: var(--color-primary);
+    max-width: 748px;
+}
+
+.technologies {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 33px;
+}
+
+.projects .btn {
+    margin-left: 5px;
+    min-width: 103px;
+    height: 28px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: 2px solid var(--color-yellow);
+    border-radius: 22px;
+    padding: 6px 18px;
+    color: var(--color-black);
+    font-size: 12px;
+    font-family: 'Nunito', sans-serif;
+    line-height: 16px;
+}
+
+/* *********** TESTIMONIALS **************** */
+
+.testimonials {
+    background-color: var(--color-bg2);
+    min-height: 623px;
+}
+
+.testimonials h3 {
+    text-align: center;
+    padding-top: 75px;
+}
+
+/* ******** FOOTER ********* */
+.footer_copyright p {
+    text-align: center;
+    padding-bottom: 109px;
+}
+
+footer .social-icons {
+    padding-top: 145px;
+}
+
+.social-icons {
+    padding-bottom: 10px;
+    justify-content: center;
+    gap: 25px;
+    display: flex;
+    flex: content;
+    flex-direction: row;
+}
+
+/* *************   INTRO ABOUT US ********************* */
+.intro_about_us {
+    height: 664px;
+    border-bottom: 8px solid;
+    border-image: linear-gradient(to right, var(--color-yellow) 25%, var(--color-green) 25%, var(--color-green) 50%, var(--color-blue) 50%, var(--color-blue) 75%, var(--color-red) 75%) 5;
+}
+
+.intro_about_us-container {
+    padding-top: 125px;
+    display: flex;
+    flex-direction: row;
+    gap: 42px;
+}
+
+.intro_about_us-left {
+    width: 558px;
+    margin-left: 0px;
+}
+
+.intro_about_us-left h1 {
+    padding-top: 105px;
+}
+
+.intro_about_us-left p {
+    line-height: 22px;
+}
+
+.intro_about_us-right {
+    background: url('/singularity-images/Group\ 38.png');
+    overflow-x: visible;
+    margin-right: -100px;
+    height: 438px;
+    background-position-x: left;
+    width: 700px;
+}
+
+/* ********* WHAT WE DO ********** */
+.what_we_do {
+    background-color: var(--color-bg1);
+}
+
+.what_we_do .container-fluid {
+    padding-top: 102px;
+    padding-left: 51px;
+    padding-right: 51px;
+}
+
+.what_we_do p {
+    padding-bottom: 110px;
+}
+
+.what_we_do-2 .container-fluid {
+    padding-top: 49px;
+    padding-left: 51px;
+    padding-right: 51px;
+    padding-bottom: 90px;
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+}
+
+.services .p7 {
+    color: var(--color-black);
+}
+
+.services-left {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding-top: 20px;
+    width: 50%;
+}
+
+.services-right {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-right .p-7 {
+    padding-top: 40px;
+}
+
+.services-title {
+    float: left;
+    line-height: 27px;
+    padding-bottom: 0px;
+    font-weight: bold;
+}
+
+
+/* ********** MEDAI QUERIES (1024-1440) *********** */
+@media (min-width:1024px) and (max-width:1399px) {
+    .container-fluid {
+        width: var(--container-width-md);
+    }
+
+    .intro_about_us-right {
+        margin-right: -22px;
+        width: 504px;
+    }
+
+    .intro_about_us p {
+        padding-bottom: 30px;
+    }
+
+}
+
+/* ********** MEDAI QUERIES (TABLETS) *********** */
+@media screen and (max-width:1024px) {
+    .container-fluid {
+        width: var(--container-width-sm);
+        margin: 0 auto;
+    }
+
+    .p7 {
+        font-size: 18px;
+    }
+
+    /* *********** NAVBAR *********** */
+
+    nav button {
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--color-primary);
+        cursor: pointer;
+    }
+
+    .navbar-toggler:focus {
+        border-color: transparent;
+    }
+
+    .navbar-toggler:focus {
+        text-decoration: none;
+        outline: 0;
+        box-shadow: none;
+        color: transparent;
+        border: 1px solid transparent;
+        border-color: transparent;
+    }
+
+    .nav-closed {
+        display: none;
+        width: 0px;
+        visibility: hidden;
+    }
+
+    .nav-canvas {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav_menu-canvas {
+        padding: 0;
+        text-align: center;
+        top: 0px;
+        background: var(--color-white);
+        height: fit-content;
+        justify-content: center;
+        height: auto;
+        gap: 0;
+    }
+
+    .nav_menu-canvas li {
+        width: 100%;
+        height: 50px;
+        opacity: 1;
+    }
+
+    .offcanvas-body .btn-close {
+        font-size: 20px;
+    }
+
+    .offcanvas-social {
+        justify-content: center;
+        font-size: 30px;
+        margin-top: 20px;
+        color: var(--color-primary);
+    }
+
+    .nav_menu-canvas li a {
+        color: var(--color-primary);
+        text-decoration: none;
+    }
+
+    .nav_menu-canvas li a:hover {
+        background: var(--color-bg2);
+        color: var(--color-white);
+    }
+
+    /* ********** INTRODUCTION ********* */
+    .introduction_image {
+        height: auto;
+    }
+
+
+    /* *********** NUMBERS *********** */
+    .numbers {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .numbers h4 {
+        padding-top: 30px;
+    }
+
+    .numbers .p2 {
+        padding-bottom: 10px;
+    }
+
+    /* *********** APPLICATIONS *********** */
+    .applications {
+        height: auto;
+    }
+
+    .applications-container {
+        padding-top: 80px;
+        flex-direction: column-reverse;
+    }
+
+    .applications-left {
+        width: 100%;
+    }
+
+    .applications_image {
+        padding-top: 0px;
+    }
+
+    .applications-right {
+        width: 100%;
+    }
+
+    .applications-right h4 {
+        margin-top: 0px;
+    }
+
+    .applications-right p {
+        padding-bottom: 10px;
+    }
+
+    /* ******** SECTION 2 ************ */
+    .section_2 {
+        height: auto;
+    }
+
+    .section_2-container {
+        padding-top: 80px;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .section_2-left {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    .section_2-left p {
+        padding-bottom: 10px;
+    }
+
+    .section_2-right {
+        display: block;
+        height: 0px;
+        visibility: hidden;
+    }
+
+    /* ********** PROJECTS ********* */
+    .projects h3 {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+
+    .projects p {
+        padding-bottom: 10px;
+    }
+
+    /* ******** FOOTER ********* */
+    .footer_copyright p {
+        padding-bottom: 40px;
+    }
+
+    footer .social-icons {
+        padding-top: 80px;
+    }
+
+    /* *************   INTRO ABOUT US ********************* */
+    .intro_about_us {
+        height: auto;
+    }
+
+    .intro_about_us-container {
+        padding-top: 80px;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 40px;
+    }
+
+    .intro_about_us-left {
+        width: 100%;
+    }
+
+    .intro_about_us-right {
+        background: url('/singularity-images/Group\ 38.png');
+        overflow-x: visible;
+        height: 100%;
+        height: 438px;
+        background-position-x: left;
+        width: 105%;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+    .what_we_do .container-fluid {
+        padding-top: 70px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .what_we_do p {
+        padding-bottom: 40px;
+    }
+
+    .what_we_do-2 .container-fluid {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 20px;
+    }
+
+    .services-left {
+        width: 100%;
+    }
+
+    .services-right {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .services-right .p-7 {
+        margin-left: 10px;
+        padding-top: 0px;
+        padding-bottom: 10px;
+    }
+
+
+    /* ********** MEDAI QUERIES (PHONES) *********** */
+    @media screen and (max-width:781px) {
+        .container-fluid {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 44px;
+            line-height: 54px;
+        }
+
+        h2 {
+
+            font-size: 44px;
+            line-height: 54px;
+        }
+
+        h3 {
+            font-size: 44px;
+            line-height: 54px;
+        }
+
+        h4 {
+            font-size: 36px;
+            line-height: 43px;
+        }
+
+        ul,
+        a,
+        ol {
+            font-size: 13px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .p1 {
+            font-size: 16px;
+        }
+
+        .p2 {
+            font-size: 14px;
+        }
+
+        .p3 {
+            font-size: 14px;
+        }
+
+        .p5 {
+            font-size: 16px;
+        }
+
+        .p6 {
+            font-size: 13px;
+        }
+
+        .p7 {
+            font-size: 16px;
+        }
+
+        .btn {
+            font-size: 14px;
+        }
+
+        .intro_about_us-right {
+            background: url('/singularity-images/group\ 38-\ small\ screen.png');
+            overflow-x: visible;
+            height: 100%;
+            height: 350px;
+            background-position-x: left;
+            width: 105%;
+        }
+    }
+
+    @media screen and (max-width:460px) {
+        h1 {
+            font-size: 35px;
+            line-height: 43px;
+        }
+
+        h2 {
+            font-size: 35px;
+            line-height: 43px;
+        }
+
+        h3 {
+            font-size: 35px;
+            line-height: 43px;
+        }
+
+        h4 {
+            font-size: 28px;
+            line-height: 34px;
+        }
+    }

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Multipage Education Website Using HTML, CSS & JavaScript</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+
+
+
+    <!-- ICONSCOUT CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+    <!-- GOOGLE FONTS (MONSERRAT)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- SLIDER -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="/owlcarousel/css/styles.css">
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!--************** NAVBAR ************-->
+    <nav>
+        <div class="container-fluid nav_container">
+            <a href="index.html">
+                <img class="logo" src="/singularity-images/logo-color.png">
+                <img class="logo_scrolled" src="/singularity-images/logo-color.png">
+            </a>
+            <ul class="nav_menu nav-closed nav-items-color">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">What We Do</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
+                aria-controls="navbarOffcanvasLg">
+                <span><i class="uil uil-bars" style="color: #2C4147; font-size: 30px; text-align: right;"></i></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg"
+                aria-labelledby="navbarOffcanvasLgLabel">
+                <div class="offcanvas-body">
+                    <div class="d-flex">
+                        <button type="button" class="btn-close ms-auto" style="margin-right:20px; margin-top:15px;"
+                            data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <ul class="nav_menu-canvas">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">What We Do</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <!--
+                            <li><a href="#"><button class="btn">Let's work together</button></a></li>
+                        -->
+                        <li class="social-icons d-flex" style="flex-direction: row;">
+                            <a href="#"><img style="height: 16.35px; width:8.76px;"
+                                    src="/singularity-images/Icon awesome-facebook-f.svg" alt=""></a>
+                            <a href="#"><img style="height: 16.76px; width:16.76px;"
+                                    src="/singularity-images/Icon metro-youtube.svg" alt=""></a>
+                            <a href="#"><img style="height: 13.28px; width:16.35px;"
+                                    src="/singularity-images/Icon awesome-twitter.svg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--************** END OF NAVBAR ************-->
+
+    <!-- *************** INTRO ABOUT US ***************** -->
+    <section class="intro_about_us">
+        <div class="intro_about_us-container container-fluid">
+            <article class="intro_about_us-left">
+                <h1>About Us</h1>
+                <p>We are builders and problem solvers that just „get it“. Our drive for creating real client and user
+                    satisfaction allows us to deliver software solutions and products that exceed expectations all the
+                    time. The results are always the same: something that we and the client are proud of.</p>
+            </article>
+            <div class="intro_about_us-right">
+            </div>
+        </div>
+    </section>
+
+    <!--************** WHAT WE DO ************-->
+    <section class="what_we_do">
+        <div class="container-fluid">
+            <p class="p7">At Singularity, we develop innovative and scalable web sites and applications in market
+                segments
+                including health care, e-commerce, customer relationship management, enterprise resource planning and
+                more. With dozens of B2B and B2C deployed projects over the past 5 years, our satisfied clients span
+                worldwide, including the USA, Europe and Australia. We consistently implement high quality products and
+                deliver solutions on time at an exceptionally competitive price. Our staff is located in the USA,
+                Australia and Europe. Currently it has 27+ development engineers and QA members</p>
+        </div>
+    </section>
+
+    <section class="what_we_do-2">
+        <div class="container-fluid">
+            <h1>What we do</h1>
+            <div class="services">
+                <div class="services-left">
+                    <p class="p7 services-title" style="padding-bottom: 10px;">
+                        Secure compliant systems
+                    </p>
+                    <p class="p7" style="padding-bottom:5px;">
+                        HIPAA compliant solutions for healthcare
+                        <br>
+                        PCI compliant solutions for payments and recurring billing
+                        <br>
+                        LOPD &LSSICE compliant solutions (EU)
+                    </p>
+                    <p class="p7 services-title" style="padding-bottom: 15px;">
+                        Custom business software
+                    </p>
+                    <div class="p7" style="margin-left: 10px;">
+                        Secure administrative backends
+                        <p class="p7"
+                            style="margin-left: 20px; padding-top: 0px; padding-bottom: 10px; line-height: 34px;">
+                            Dashboards
+                            <br>
+                            Document management
+                            <br>
+                            Workflow automation
+                            <br>
+                            CMR
+                            <br>
+                            CMS Business Intelligence Reporting
+                            <br>
+                            Order control and inventory management
+                            <br>
+                            Quote and invoice management
+                            <br>
+                            Subscription management
+                        </p>
+                    </div>
+                    <div class="p7" style="margin-left: 10px;">
+                        Training and assessment tools
+                        <br>
+                        CLient portals
+                        <br>
+                        Payment systems
+                    </div>
+                </div>
+                <div class="services-right">
+                    <p class="p7 p-7">
+                        Identity/brand sites
+                        <br>
+                        Social media
+                        <br>
+                        e-Commerce
+                        <br>
+                        Subscription services
+                        <br>
+                        Startup applications
+                        <br>
+                        SaaS
+                        <br>
+                        Content management
+                    </p>
+                    <p class="p7 services-title">
+                        Mobile apps IT advisement
+                    </p>
+                    <p class="p7 services-title">
+                        System upgrades
+                    </p>
+                    <p class="p7 services-title">
+                        Legacy modernization
+                    </p>
+                    <p class="p7 services-title">
+                        Managed cloud hosting
+                    </p>
+                    <p class="p7 services-title">
+                        Technology support
+                    </p>
+                    <p class="p7 services-title">
+                        Data and application migrations
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- *************** END OFWHAT WE DO *********** -->
+
+    <!-- *************** FOOTER *********** -->
+    <footer>
+        <div class="container-fluid">
+            <div class="footer_copyright">
+                <span class="social-icons">
+                    <a href="#"><img style="height: 16.35px; width:8.76px;"
+                            src="/singularity-images/Icon awesome-facebook-f.svg" alt=""></a>
+                    <a href="#"><img style="height: 16.76px; width:16.76px;"
+                            src="/singularity-images/Icon metro-youtube.svg" alt=""></a>
+                    <a href="#"><img style="height: 13.28px; width:16.35px;"
+                            src="/singularity-images/Icon awesome-twitter.svg" alt=""></a>
+                </span>
+                <p class="p6"> Privacy Policy Terms and Conditions
+                    <br>
+                    2021 Singularity | All rights reserved
+                </p>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- ***************END OF FOOTER *********** -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="/js-singularity/main.js"></script>
+</body>
+
+</html>
